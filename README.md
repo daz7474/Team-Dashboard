@@ -1,4 +1,4 @@
-# Team-Dashboard
+# Team Dashboard
 
 Template to get started developing with Vue 3 in Vite.
 
