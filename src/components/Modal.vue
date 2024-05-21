@@ -7,17 +7,13 @@ defineProps({
 <template>
   <div v-if="show" class="modal-mask">
     <div class="modal-container">
-      <header>
-        <slot name="header">Default Header</slot>
-      </header>
-
       <div>
         <slot>Default Body</slot>
       </div>
 
-      <footer>
+      <footer class="modal-footer">
         <slot name="footer">
-          <button @click="$emit('close')">Default Close</button>
+          <button @click="$emit('close')">Close</button>
         </slot>
       </footer>
     </div>
@@ -38,5 +34,23 @@ defineProps({
   padding: 1rem;
   width: 80vw;
   max-width: 500px;
+  border-radius: 7px;
+}
+
+.modal-footer {
+  border-top: 1px solid #ddd;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  font-size: .8rem;
+}
+
+.modal-footer button {
+  background: #ddd;
+  padding: .25rem .75rem;
+  border-radius: 20px;
+}
+
+.modal-footer button:hover {
+  background: #c8c8c8;
 }
 </style>
